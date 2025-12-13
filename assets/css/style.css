@@ -1,0 +1,524 @@
+@import "tailwindcss";
+
+/*Rokh Farsi Font Family*/
+@layer base {
+  @font-face {
+    font-family: "Rokh-fa";
+    font-style: normal;
+    font-weight: 100;
+    font-display: swap;
+    src: url("../../font/rokh/fa/woff2/RokhFaNum-Thin.woff2") format("woff2"),
+      url("../../font/rokh/fa/ttf/RokhFaNum-Thin.ttf") format("TrueType"),
+      url("../../font/rokh/fa/woff/RokhFaNum-Thin.woff") format("woff");
+  }
+
+  @font-face {
+    font-family: "Rokh-fa";
+    font-style: normal;
+    font-weight: 200;
+    font-display: swap;
+    src: url("../../font/rokh/fa/woff2/RokhFaNum-ExtraLight.woff2")
+        format("woff2"),
+      url("../../font/rokh/fa/ttf/RokhFaNum-ExtraLight.ttf") format("TrueType"),
+      url("../../font/rokh/fa/woff/RokhFaNum-ExtraLight.woff") format("woff");
+  }
+
+  @font-face {
+    font-family: "Rokh-fa";
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url("../../font/rokh/fa/woff2/RokhFaNum-Light.woff2") format("woff2"),
+      url("../../font/rokh/fa/ttf/RokhFaNum-Light.ttf") format("TrueType"),
+      url("../../font/rokh/fa/woff/RokhFaNum-Light.woff") format("woff");
+  }
+
+  @font-face {
+    font-family: "Rokh-fa";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url("../../font/rokh/fa/woff2/RokhFaNum-Regular.woff2") format("woff2"),
+      url("../../font/rokh/fa/ttf/RokhFaNum-Regular.ttf") format("TrueType"),
+      url("../../font/rokh/fa/woff/RokhFaNum-Regular.woff") format("woff");
+  }
+
+  @font-face {
+    font-family: "Rokh-fa";
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url("../../font/rokh/fa/woff2/RokhFaNum-Medium.woff2") format("woff2"),
+      url("../../font/rokh/fa/ttf/RokhFaNum-Medium.ttf") format("TrueType"),
+      url("../../font/rokh/fa/woff/RokhFaNum-Medium.woff") format("woff");
+  }
+
+  @font-face {
+    font-family: "Rokh-fa";
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url("../../font/rokh/fa/woff2/RokhFaNum-SemiBold.woff2")
+        format("woff2"),
+      url("../../font/rokh/fa/ttf/RokhFaNum-SemiBold.ttf") format("TrueType"),
+      url("../../font/rokh/fa/woff/RokhFaNum-SemiBold.woff") format("woff");
+  }
+
+  @font-face {
+    font-family: "Rokh-fa";
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url("../../font/rokh/fa/woff2/RokhFaNum-Bold.woff2") format("woff2"),
+      url("../../font/rokh/fa/ttf/RokhFaNum-Bold.ttf") format("TrueType"),
+      url("../../font/rokh/fa/woff/RokhFaNum-Bold.woff") format("woff");
+  }
+
+  @font-face {
+    font-family: "Rokh-fa";
+    font-style: normal;
+    font-weight: 800;
+    font-display: swap;
+    src: url("../../font/rokh/fa/woff2/RokhFaNum-ExtraBold.woff2")
+        format("woff2"),
+      url("../../font/rokh/fa/ttf/RokhFaNum-ExtraBold.ttf") format("TrueType"),
+      url("../../font/rokh/fa/woff/RokhFaNum-ExtraBold.woff") format("woff");
+  }
+
+  @font-face {
+    font-family: "Rokh-fa";
+    font-style: normal;
+    font-weight: 900;
+    font-display: swap;
+    src: url("../../font/rokh/fa/woff2/RokhFaNum-Black.woff2") format("woff2"),
+      url("../../font/rokh/fa/ttf/RokhFaNum-Black.ttf") format("TrueType"),
+      url("../../font/rokh/fa/woff/RokhFaNum-Black.woff") format("woff");
+  }
+}
+
+/*Rokh English Font Family*/
+@layer base {
+  @font-face {
+    font-family: "Rokh-en";
+    font-style: normal;
+    font-weight: 100;
+    font-display: swap;
+    src: url("../../font/rokh/en/woff2/Rokh-Thin.woff2") format("woff2"),
+      url("../../font/rokh/en/ttf/Rokh-Thin.ttf") format("TrueType"),
+      url("../../font/rokh/en/woff/Rokh-Thin.woff") format("woff");
+  }
+
+  @font-face {
+    font-family: "Rokh-en";
+    font-style: normal;
+    font-weight: 200;
+    font-display: swap;
+    src: url("../../font/rokh/en/woff2/Rokh-ExtraLight.woff2") format("woff2"),
+      url("../../font/rokh/en/ttf/Rokh-ExtraLight.ttf") format("TrueType"),
+      url("../../font/rokh/en/woff/Rokh-ExtraLight.woff") format("woff");
+  }
+
+  @font-face {
+    font-family: "Rokh-en";
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url("../../font/rokh/en/woff2/Rokh-Light.woff2") format("woff2"),
+      url("../../font/rokh/en/ttf/Rokh-Light.ttf") format("TrueType"),
+      url("../../font/rokh/en/woff/Rokh-Light.woff") format("woff");
+  }
+
+  @font-face {
+    font-family: "Rokh-en";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url("../../font/rokh/en/woff2/Rokh-Regular.woff2") format("woff2"),
+      url("../../font/rokh/en/ttf/Rokh-Regular.ttf") format("TrueType"),
+      url("../../font/rokh/en/woff/Rokh-Regular.woff") format("woff");
+  }
+
+  @font-face {
+    font-family: "Rokh-en";
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url("../../font/rokh/en/woff2/Rokh-Medium.woff2") format("woff2"),
+      url("../../font/rokh/en/ttf/Rokh-Medium.ttf") format("TrueType"),
+      url("../../font/rokh/en/woff/Rokh-Medium.woff") format("woff");
+  }
+
+  @font-face {
+    font-family: "Rokh-en";
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url("../../font/rokh/en/woff2/Rokh-SemiBold.woff2") format("woff2"),
+      url("../../font/rokh/en/ttf/Rokh-SemiBold.ttf") format("TrueType"),
+      url("../../font/rokh/en/woff/Rokh-SemiBold.woff") format("woff");
+  }
+
+  @font-face {
+    font-family: "Rokh-en";
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url("../../font/rokh/en/woff2/Rokh-Bold.woff2") format("woff2"),
+      url("../../font/rokh/en/ttf/Rokh-Bold.ttf") format("TrueType"),
+      url("../../font/rokh/en/woff/Rokh-Bold.woff") format("woff");
+  }
+
+  @font-face {
+    font-family: "Rokh-en";
+    font-style: normal;
+    font-weight: 800;
+    font-display: swap;
+    src: url("../../font/rokh/en/woff2/Rokh-ExtraBold.woff2") format("woff2"),
+      url("../../font/rokh/en/ttf/Rokh-ExtraBold.ttf") format("TrueType"),
+      url("../../font/rokh/en/woff/Rokh-ExtraBold.woff") format("woff");
+  }
+
+  @font-face {
+    font-family: "Rokh-en";
+    font-style: normal;
+    font-weight: 900;
+    font-display: swap;
+    src: url("../../font/rokh/en/woff2/Rokh-Black.woff2") format("woff2"),
+      url("../../font/rokh/en/ttf/Rokh-Black.ttf") format("TrueType"),
+      url("../../font/rokh/en/woff/Rokh-Black.woff") format("woff");
+  }
+}
+
+@layer base {
+  /* Default: Persian font */
+  body {
+    font-family: "Rokh-fa", sans-serif;
+    font-feature-settings: "ss01" 1;
+    font-variant-ligatures: normal;
+  }
+
+  /* English font when lang is en */
+  html[lang="en"] body,
+  html[lang="en-US"] body,
+  html[lang="en-GB"] body {
+    font-family: "Rokh-en", sans-serif;
+    font-feature-settings: normal;
+    font-variant-ligatures: normal;
+  }
+
+  /* Persian font when lang is fa */
+  html[lang="fa"] body,
+  html[lang="fa-IR"] body {
+    font-family: "Rokh-fa", sans-serif;
+    font-feature-settings: "ss01" 1;
+    font-variant-ligatures: normal;
+  }
+
+  svg {
+    width: inherit;
+    height: inherit;
+  }
+}
+
+@theme {
+  --color-cynOrange: #efa114;
+  --color-cynWhite: #ffffff;
+  --color-cynBlack: #2a2a2a;
+  --color-cynRed: #ef1414;
+  --color-cynHover: #894608;
+  --color-cynBG: #f2f2f2;
+  --color-cynRed: #ef1414;
+  --color-cynBorder: #cccccc;
+}
+
+.container {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+
+.primary-btn {
+  @apply pb-2 pt-3 px-6 bg-cynWhite shadow-[0px-4px-9px-0px-#00000024] text-xl font-medium rounded-2xl hover:bg-cynHover hover:text-cynWhite transition-all duration-300;
+}
+
+.secondary-btn {
+  @apply pb-3 pt-3.5 px-6 bg-cynOrange shadow-[0px-4px-9px-0px-#00000024] text-xl font-medium rounded-2xl hover:bg-cynHover hover:text-cynWhite transition-all duration-300;
+}
+
+.fa {
+  padding-top: 3.25px;
+}
+
+button,
+a {
+  cursor: pointer;
+}
+
+.mobile-menu-scroll {
+  overflow-y: scroll;
+  scrollbar-width: none;
+}
+
+.shadow-item {
+  box-shadow: 0px 4px 9px 0px #00000024;
+}
+
+.divider {
+  position: relative;
+}
+
+.divider::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  right: -75%;
+  top: 0;
+  background: #e8e8e8;
+  z-index: -1;
+}
+
+.divider-vertical {
+  position: relative;
+}
+
+.divider-vertical::before {
+  content: "";
+  position: absolute;
+  height: 80%;
+  width: 1px;
+  right: -75%;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #2a2a2a1f;
+  z-index: -1;
+}
+
+#child-quantity::-webkit-inner-spin-button,
+#child-quantity::-webkit-outer-spin-button,
+#adult-quantity::-webkit-inner-spin-button,
+#adult-quantity::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+#child-quantity[type="number"],
+#adult-quantity[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.scrollbar {
+  scrollbar-width: none !important;
+}
+
+.scrollbar::-webkit-scrollbar {
+  display: none !important;
+}
+
+.scrollbar::-webkit-scrollbar-track {
+  display: none !important;
+}
+
+.scrollbar::-webkit-scrollbar-thumb {
+  display: none !important;
+}
+
+#breadcrumb {
+  scrollbar-width: none !important;
+}
+
+#breadcrumb nav::-webkit-scrollbar {
+  display: none !important;
+}
+
+#breadcrumb nav::-webkit-scrollbar-track {
+  display: none !important;
+}
+
+#breadcrumb nav::-webkit-scrollbar-thumb {
+  display: none !important;
+}
+
+/* Hide default WooCommerce star rating in comment form */
+.comment-form-rating .stars {
+  display: none !important;
+}
+
+.comment-form-rating p.stars {
+  display: none !important;
+}
+
+.comment-notes {
+  display: none;
+}
+
+.comment-form .form-submit {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+html[dir="rtl"] input {
+  direction: rtl;
+}
+
+/*-------mobile-menu---------*/
+#mobile-menu li {
+  position: relative;
+}
+
+#mobile-menu > li {
+  @apply w-full mx-auto;
+}
+
+#mobile-menu li a {
+  display: block;
+}
+
+#mobile-menu li ul {
+  display: none;
+  position: static;
+  width: 100%;
+  @apply gap-0.5 [&>li]:border-t [&>li]:border-[#F4F4F6] [&>li]:first:border-t-0 flex-col text-cynBlack [&_li_a]:flex [&_li_a]:pb-2 [&_li_a]:pt-3 [&_li_a]:w-full text-base font-semibold;
+}
+
+#mobile-menu .sub-menu-toggle {
+  display: none;
+  cursor: pointer;
+}
+
+#mobile-menu i {
+  float: left;
+  width: 100%;
+  text-align: left;
+  left: 0;
+  position: absolute;
+  z-index: 0;
+  line-height: 0;
+  font-style: normal;
+}
+
+#mobile-menu .menu-item-has-children > .sub-menu-toggle {
+  display: block;
+}
+
+/*-------main-menu---------*/
+#main-menu li {
+  position: relative;
+}
+
+#main-menu li ul {
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  top: 50px;
+  right: 0;
+  list-style: none;
+  margin: 0;
+  padding: 1rem;
+  background: #ffffff;
+  border-radius: 1.25rem;
+  transition: all 0.3s ease;
+  box-shadow: 0px 4px 9px 0px #00000024;
+  @apply [&>li]:border-t-2 [&>li]:border-[#F4F4F6] [&>li]:first:border-t-0;
+}
+
+#main-menu li ul li {
+  min-width: 12.5rem;
+}
+
+#main-menu li a {
+  display: block;
+  white-space: nowrap;
+}
+
+#main-menu li ul li a {
+  padding: 0.625rem;
+  display: block;
+}
+
+#main-menu li:hover > ul {
+  pointer-events: all;
+  opacity: 1;
+}
+
+#main-menu li ul li ul {
+  top: 0;
+  right: 100%;
+}
+
+#main-menu li ul li:hover > ul {
+  display: block;
+}
+
+#main-menu li.menu-item-has-children > a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.25rem;
+}
+
+#main-menu li.menu-item-has-children::after {
+  content: "";
+  position: absolute;
+  top: 90%;
+  left: 0;
+  right: -16px;
+  width: 16vw;
+  height: 40px;
+  z-index: 51;
+  pointer-events: none;
+  opacity: 0;
+}
+
+#main-menu li.menu-item-has-children:hover::after {
+  pointer-events: auto;
+}
+
+#main-menu li.menu-item-has-children:hover li {
+  color: var(--color-cynBlack);
+}
+
+#main-menu > li:hover {
+  color: var(--color-cynOrange);
+}
+
+#main-menu li li:hover {
+  color: var(--color-cynOrange) !important;
+}
+
+span.woocommerce-Price-amount.amount bdi {
+  display: flex;
+  gap: 0.25rem;
+}
+
+/* حذف فلش‌ها در Chrome, Edge, Safari */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* حذف فلش‌ها در Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.metabox-container .form-table th {
+  width: 150px;
+  padding: 15px 10px;
+}
+
+.metabox-container .form-table td {
+  padding: 15px 10px;
+}
+
+.metabox-container .form-table tr {
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.metabox-container .form-table tr:last-child {
+  border-bottom: none;
+}
