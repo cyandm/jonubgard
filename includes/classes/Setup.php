@@ -28,6 +28,6 @@ class Setup
 
 		Finder::init();
 
-		//Search::init();
+		Search::init();
 	}
 }

@@ -51,17 +51,17 @@ $search_type = empty($_GET['search-type']) ? 'all' : $_GET['search-type'];
                                                 name="search-type"
                                                 id="search-all"
                                                 <?php echo $search_type === 'all' ? 'checked' : '' ?>>
-                                          <label for="product" class="pt-1"><?php _e('همه', 'jonubgard'); ?></label>
+                                          <label for="search-all" class="pt-1"><?php _e('همه', 'jonubgard'); ?></label>
                                     </div>
 
                                     <div class="flex justify-center items-center gap-1 fa">
                                           <input class="custom filter blog_input w-6 h-6"
-                                                value="product"
+                                                value="travel"
                                                 type="radio"
                                                 name="search-type"
-                                                id="search-product"
-                                                <?php echo $search_type === 'product' ? 'checked' : '' ?>>
-                                          <label for="product" class="pt-1"><?php _e('تورها', 'jonubgard'); ?></label>
+                                                id="search-travel"
+                                                <?php echo $search_type === 'travel' ? 'checked' : '' ?>>
+                                          <label for="search-travel" class="pt-1"><?php _e('سفرها', 'jonubgard'); ?></label>
                                     </div>
 
                                     <div class="flex justify-center items-center gap-1 fa">
@@ -71,7 +71,7 @@ $search_type = empty($_GET['search-type']) ? 'all' : $_GET['search-type'];
                                                 name="search-type"
                                                 id="search-destination"
                                                 <?php echo $search_type === 'destination' ? 'checked' : '' ?>>
-                                          <label for="destination" class="pt-1"><?php _e('مقصدها', 'jonubgard'); ?></label>
+                                          <label for="search-destination" class="pt-1"><?php _e('مقصدها', 'jonubgard'); ?></label>
                                     </div>
                                     <div class="flex justify-center items-center gap-1 fa">
                                           <input class="custom filter blog_input w-6 h-6"
@@ -80,7 +80,7 @@ $search_type = empty($_GET['search-type']) ? 'all' : $_GET['search-type'];
                                                 name="search-type"
                                                 id="search-blog"
                                                 <?php echo $search_type === 'post' ? 'checked' : '' ?>>
-                                          <label for="blog" class="pt-1"><?php _e('بلاگ', 'jonubgard'); ?></label>
+                                          <label for="search-blog" class="pt-1"><?php _e('بلاگ', 'jonubgard'); ?></label>
                                     </div>
 
                               </div>
@@ -125,9 +125,5 @@ $search_type = empty($_GET['search-type']) ? 'all' : $_GET['search-type'];
       </section>
 
 </main>
-
-
-
-
 
 <?php get_footer() ?>
