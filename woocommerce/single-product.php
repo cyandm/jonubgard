@@ -806,7 +806,7 @@ $child_price = 0; // کودکان رایگان هستند - فقط در سفار
 		</div>
 
 		<div class="w-1/4 lg:w-1/3 relative max-lg:hidden">
-			<div class="sticky top-4">
+			<div class="sticky top-4 pb-3">
 				<div class="p-6 bg-cynWhite rounded-3xl shadow-item flex flex-col gap-3 justify-center items-center mb-3">
 					<p class="text-xl font-bold"><?php _e('برای اطلاعات بیشتر تماس بگیرید', 'jonubgard') ?></p>
 					<span class="text-base font-medium"><?php _e('هرروز از ۹ تا ۱۲ شب', 'jonubgard') ?></span>
@@ -860,7 +860,7 @@ $child_price = 0; // کودکان رایگان هستند - فقط در سفار
 
 					<!-- Guest Name -->
 					<div class="w-full">
-						<input type="text" name="booking_guest_name" id="guest-name" class="h-[72px] p-3 border border-cynBorder rounded-2xl w-full text-right text-base font-medium outline-none bg-transparent placeholder:text-[#9E9E9E]" placeholder="<?php _e('نام مهمان', 'jonubgard'); ?>" />
+						<input type="text" name="booking_guest_name" id="guest-name" class="h-[72px] p-3 border border-cynBorder rounded-2xl w-full text-right text-base font-medium outline-none bg-transparent placeholder:text-[#9E9E9E]" required placeholder="<?php _e('نام مهمان', 'jonubgard'); ?>" />
 					</div>
 
 					<!-- Total Cost -->
@@ -953,7 +953,7 @@ $child_price = 0; // کودکان رایگان هستند - فقط در سفار
 
 			<!-- Guest Name -->
 			<div class="w-full">
-				<input type="text" name="booking_guest_name" id="guest-name" class="h-[72px] p-3 border border-cynBorder rounded-2xl w-full text-right text-base font-medium outline-none bg-transparent placeholder:text-[#9E9E9E]" placeholder="<?php _e('نام مهمان', 'jonubgard'); ?>" />
+				<input type="text" name="booking_guest_name" id="guest-name" class="h-[72px] p-3 border border-cynBorder rounded-2xl w-full text-right text-base font-medium outline-none bg-transparent placeholder:text-[#9E9E9E]" required placeholder="<?php _e('نام مهمان', 'jonubgard'); ?>" />
 			</div>
 
 			<!-- Total Cost -->

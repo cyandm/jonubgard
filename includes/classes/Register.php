@@ -33,6 +33,7 @@ class Register
 			'footer-menu' => 'منوی پایین',
 			'quick-menu' => 'منوی دسترسی سریع',
 			'more-menu' => 'منوی سایر',
+			'login-menu' => 'منوی بعد از ورود/ثبت نام',
 		]);
 	}
 
