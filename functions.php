@@ -10,7 +10,7 @@
 define('THEME_DIR', get_template_directory());
 define('THEME_URI', get_template_directory_uri());
 define('THEME_VERSION', '1.0.0');
-define('ENVIRONMENT', 'production'); //development, production
+define('ENVIRONMENT', 'development'); //development, production
 define('THEME_SLUG', 'jonubgard');
 define('THEME_NAME', 'Jonubgard');
 
