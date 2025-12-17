@@ -3687,8 +3687,8 @@ button, a {
   cursor: pointer;
 }
 strong {
-  font-size: 1.25rem;
-  font-weight: 800;
+  font-size: 1.25rem !important;
+  font-weight: 800 !important;
 }
 .mobile-menu-scroll {
   overflow-y: scroll;

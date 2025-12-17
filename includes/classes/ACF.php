@@ -182,8 +182,8 @@ class ACF
 
 		$acfGroup->layoutFields->addTab('travel_gallery', 'گالری سفر');
 		for ($i = 1; $i <= 30; $i++) {
-			$acfGroup->contentFields->addFile('travel_images_' . $i, 'عکس یا ویدیو سفر ' . $i, ['width' => '100%']);
-			$acfGroup->contentFields->addFile('travel_video_cover_' . $i, 'تصویر پوشش ویدیو سفر(اگر ویدیو باشد باید یک عکس کاور برای آن انتخاب کنید) ' . $i, ['width' => '100%']);
+			$acfGroup->contentFields->addFile('travel_images_' . $i, 'عکس یا ویدیو سفر ' . $i, ['width' => '50%']);
+			$acfGroup->contentFields->addFile('travel_video_cover_' . $i, 'تصویر پوشش ویدیو سفر(اگر ویدیو باشد باید یک عکس کاور برای آن انتخاب کنید) ' . $i, ['width' => '50%']);
 		}
 
 		$acfGroup->layoutFields->addTab('travel_information', 'اطلاعات سفر');
@@ -427,6 +427,7 @@ class ACF
 		$acfGroup->layoutFields->addTab('travelogue', 'بنر سفرنامه');
 		$acfGroup->contentFields->addImage('travelogue_image_desktop', 'عکس بنر سفرنامه (دسکتاپ)', ['width' => '100%']);
 		$acfGroup->contentFields->addImage('travelogue_image_mobile', 'عکس بنر سفرنامه (موبایل)', ['width' => '100%']);
+		$acfGroup->relationshipFields->addLink('travelogue_image_link', 'لینک سفرنامه', ['width' => '100%']);
 
 		$acfGroup->layoutFields->addTab('travelogue_selected', 'نمایش سفرنامه های منتخب');
 		$acfGroup->basicFields->addText('travelogue_selected_title', 'عنوان نمایش سفرنامه های منتخب', [

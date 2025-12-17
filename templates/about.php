@@ -28,7 +28,7 @@ get_header(); ?>
 
     <?php if ($gallery_query->have_posts()): ?>
 
-        <section class="flex flex-col gap-4 my-14">
+        <section class="flex flex-col gap-4 my-14" id="gallery">
 
             <p class="text-3xl md:text-5xl font-extrabold text-cynBlack text-center"><?php $about_gallery_title ? $about_gallery_title : _e('گالری تصاویر', 'jonubgard'); ?></p>
 

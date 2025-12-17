@@ -128,8 +128,10 @@ get_header();
     <?php if ($travelogue_image_desktop || $travelogue_image_mobile) : ?>
         <section class="travelogue my-14">
             <div class="w-full">
-                <img src="<?php echo wp_get_attachment_image_url($travelogue_image_desktop, 'full'); ?>" alt="بنر سفرنامه" class="w-full h-full object-cover max-md:hidden">
-                <img src="<?php echo wp_get_attachment_image_url($travelogue_image_mobile, 'full'); ?>" alt="بنر سفرنامه" class="w-full h-full object-cover md:hidden">
+                <a href="<?php echo $travelogue_image_link['url']; ?>">
+                    <img src="<?php echo wp_get_attachment_image_url($travelogue_image_desktop, 'full'); ?>" alt="بنر سفرنامه" class="w-full h-full object-cover max-md:hidden">
+                    <img src="<?php echo wp_get_attachment_image_url($travelogue_image_mobile, 'full'); ?>" alt="بنر سفرنامه" class="w-full h-full object-cover md:hidden">
+                </a>
             </div>
         </section>
     <?php endif; ?>

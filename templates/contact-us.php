@@ -188,7 +188,7 @@ get_header();
                                           <span class="text-cynBlack pt-1"><?php echo $phone_number; ?></span>
                                     </a>
 
-                                    <a href="tel:<?php echo $whatsapp_number; ?>" class="flex items-center gap-1 text-sm whitespace-nowrap max-lg:text-base">
+                                    <a href="<?php echo 'https://wa.me/' . $whatsapp_number; ?>" class="flex items-center gap-1 text-sm whitespace-nowrap max-lg:text-base">
                                           <i class="bg-cynOrange p-1 rounded-full flex justify-center items-center size-7 text-white stroke-[1.5]">
                                                 <?php icon::print('Whatsup'); ?>
                                           </i>

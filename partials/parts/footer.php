@@ -115,13 +115,13 @@ $logo = get_option('logo');
 						</i>
 						<span class="pt-1"><?php echo $address_text; ?></span>
 					</a>
-					<a href="<?php echo $phone_number_support; ?>" class="text-cynBlack/80 text-base font-normal flex items-center gap-1">
+					<a href="<?php echo 'tel:' . $phone_number_support; ?>" class="text-cynBlack/80 text-base font-normal flex items-center gap-1">
 						<i class="size-6 flex text-cynOrange stroke-2">
 							<?php Icon::print('Phone,-Call-2'); ?>
 						</i>
 						<span class="pt-1"><?php echo $phone_number_support; ?></span>
 					</a>
-					<a href="<?php echo $email_address; ?>" class="text-cynBlack/80 text-base font-normal flex items-center gap-1">
+					<a href="<?php echo 'mailto:' . $email_address; ?>" class="text-cynBlack/80 text-base font-normal flex items-center gap-1">
 						<i class="size-6 flex text-cynOrange stroke-2">
 							<?php Icon::print('Web,-Finder,-Window'); ?>
 						</i>
