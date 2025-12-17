@@ -56,7 +56,6 @@ class Register
 		self::makeTaxonomy('faq_cat', 'دسته سوالات ', 'دسته ها', ['faq']);
 		self::makeTaxonomy('faq_place', 'مکان نمایش ', 'مکان ها', ['faq']);
 		self::makeTaxonomy('destination', 'مقصد', 'مقصد ها', ['product']);
-		self::makeTaxonomy('experience', 'تجربه', 'تجربه ها', ['product']);
 	}
 
 	/**

@@ -588,7 +588,7 @@ $child_price = 0; // کودکان رایگان هستند - فقط در سفار
 			<div class="tab-contents relative">
 
 				<div id="tab_1" class="tab-content hidden [&.active]:flex active flex-col gap-3">
-					<h2 class="text-2xl font-bold"><?php echo $travel_subtitle ?></h2>
+					<h2 class="text-2xl font-bold pt-1"><?php echo $travel_subtitle ?></h2>
 
 					<div class="text-base font-semibold leading-8 flex flex-col">
 						<span class="fa">
@@ -611,53 +611,62 @@ $child_price = 0; // کودکان رایگان هستند - فقط در سفار
 
 					</div>
 
-					<div class="divider w-full py-2.5 text-xl font-semibold bg-[#E8E8E8] rounded-l-3xl">
-						<span class="fa">
-							<?php _e('اقامت', 'jonubgard') ?>
-						</span>
-					</div>
 
-					<div class="text-base font-medium leading-8 flex flex-col">
-						<span>
-							<?php echo $travel_accommodation_details; ?>
-						</span>
-					</div>
+					<?php if ($travel_accommodation_details): ?>
+						<div class="divider w-full py-2.5 text-xl font-semibold bg-[#E8E8E8] rounded-l-3xl">
+							<span class="fa">
+								<?php _e('اقامت', 'jonubgard') ?>
+							</span>
+						</div>
 
-					<div class="divider w-full py-2.5 text-xl font-semibold bg-[#E8E8E8] rounded-l-3xl">
-						<span class="fa">
-							<?php _e('گشت‌ها و تجربه‌های منحصربه‌فرد', 'jonubgard') ?>
-						</span>
-					</div>
+						<div class="text-base font-medium leading-8 flex flex-col">
+							<span>
+								<?php echo $travel_accommodation_details; ?>
+							</span>
+						</div>
+					<?php endif; ?>
 
-					<div class="text-base font-medium leading-8 flex flex-col">
-						<span>
-							<?php echo $travel_experiences; ?>
-						</span>
-					</div>
+					<?php if ($travel_experiences): ?>
+						<div class="divider w-full py-2.5 text-xl font-semibold bg-[#E8E8E8] rounded-l-3xl">
+							<span class="fa">
+								<?php _e('گشت‌ها و تجربه‌های منحصربه‌فرد', 'jonubgard') ?>
+							</span>
+						</div>
 
-					<div class="divider w-full py-2.5 text-xl font-semibold bg-[#E8E8E8] rounded-l-3xl">
-						<span class="fa">
-							<?php _e('خدمات تور', 'jonubgard') ?>
-						</span>
-					</div>
+						<div class="text-base font-medium leading-8 flex flex-col">
+							<span>
+								<?php echo $travel_experiences; ?>
+							</span>
+						</div>
+					<?php endif; ?>
 
-					<div class="text-sm font-medium leading-8 flex flex-col">
-						<span>
-							<?php echo $travel_services; ?>
-						</span>
-					</div>
+					<?php if ($travel_services): ?>
+						<div class="divider w-full py-2.5 text-xl font-semibold bg-[#E8E8E8] rounded-l-3xl">
+							<span class="fa">
+								<?php _e('خدمات تور', 'jonubgard') ?>
+							</span>
+						</div>
 
-					<div class="divider w-full py-2.5 text-xl font-semibold bg-[#E8E8E8] rounded-l-3xl">
-						<span class="fa">
-							<?php _e('هزینه تور', 'jonubgard') ?>
-						</span>
-					</div>
+						<div class="text-sm font-medium leading-8 flex flex-col">
+							<span>
+								<?php echo $travel_services; ?>
+							</span>
+						</div>
+					<?php endif; ?>
 
-					<div class="text-base font-semibold leading-8 flex flex-col">
-						<span>
-							<?php echo $travel_price_details; ?>
-						</span>
-					</div>
+					<?php if ($travel_price_details): ?>
+						<div class="divider w-full py-2.5 text-xl font-semibold bg-[#E8E8E8] rounded-l-3xl">
+							<span class="fa">
+								<?php _e('هزینه تور', 'jonubgard') ?>
+							</span>
+						</div>
+
+						<div class="text-base font-semibold leading-8 flex flex-col">
+							<span>
+								<?php echo $travel_price_details; ?>
+							</span>
+						</div>
+					<?php endif; ?>
 
 				</div>
 
@@ -668,38 +677,17 @@ $child_price = 0; // کودکان رایگان هستند - فقط در سفار
 
 						<ul class="flex flex-row flex-wrap gap-3">
 							<?php
-							// Define all travel features with their labels
-							$travel_features = [
-								['var' => 'travel_hotel_stay', 'label' => 'اقامت هتل'],
-								['var' => 'travel_breakfast', 'label' => 'صبحانه'],
-								['var' => 'travel_transfers_included', 'label' => 'تمامی ترانسفرها'],
-								['var' => 'travel_tour_leader', 'label' => 'لیدر همراه'],
-								['var' => 'travel_insurance', 'label' => 'بیمه مسافرتی'],
-								['var' => 'travel_triberka_village', 'label' => 'روستای تریبرکا'],
-								['var' => 'travel_dog_sledding', 'label' => 'سورتمه سواری با سگ'],
-								['var' => 'travel_glass_igloo', 'label' => 'ایگلوی شیشه‌ای'],
-								['var' => 'travel_included_tour', 'label' => 'تور شامل'],
-								['var' => 'travel_included_meal', 'label' => 'وعده غذایی شامل'],
-								['var' => 'travel_night_walk', 'label' => 'پیاده‌روی شبانه'],
-								['var' => 'travel_excess_foreign_currency', 'label' => 'ارز اضافی خارجی'],
-								['var' => 'travel_weapons', 'label' => 'سلاح'],
-								['var' => 'travel_pets_without_health_certificate', 'label' => 'حیوانات خانگی بدون گواهی سلامت'],
-								['var' => 'travel_drugs', 'label' => 'مواد مخدر'],
-								['var' => 'travel_psychoactive_meds', 'label' => 'داروهای روان‌گردان'],
-								['var' => 'travel_optional_tour', 'label' => 'تور اختیاری'],
-							];
+							// Loop through 40 travel features from ACF
+							for ($i = 1; $i <= 40; $i++) :
+								$feature_label = get_field('travel_feature_label_' . $i, $product_id);
+								$feature_status = get_field('travel_feature_status_' . $i, $product_id);
 
-							// Loop through features and display only if variable exists
-							foreach ($travel_features as $index => $feature) :
-								$var_name = $feature['var'];
-								$var_value = isset($$var_name) ? $$var_name : '';
-
-								// Skip if variable doesn't exist or is empty
-								if (empty($var_value)) {
+								// Skip if label is empty (feature not set)
+								if (empty($feature_label)) {
 									continue;
 								}
 
-								$is_yes = ($var_value == 'yes');
+								$is_yes = ($feature_status == 'yes');
 								$icon_class = $is_yes ? 'text-cynOrange' : 'text-cynRed';
 								$icon_name = $is_yes ? 'checkmark-circle-1' : 'Delete,-Disabled-1';
 							?>
@@ -708,10 +696,10 @@ $child_price = 0; // کودکان رایگان هستند - فقط در سفار
 									<i class="size-7 stroke-2 <?php echo $icon_class; ?>">
 										<?php Icon::print($icon_name); ?>
 									</i>
-									<span class="font-semibold text-base fa"><?php _e($feature['label'], 'jonubgard'); ?></span>
+									<span class="font-semibold text-base fa"><?php echo esc_html($feature_label); ?></span>
 								</li>
 
-							<?php endforeach; ?>
+							<?php endfor; ?>
 
 						</ul>
 

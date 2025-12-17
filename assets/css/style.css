@@ -256,6 +256,11 @@ a {
   cursor: pointer;
 }
 
+strong {
+  font-size: 1.25rem;
+  font-weight: 800;
+}
+
 .mobile-menu-scroll {
   overflow-y: scroll;
   scrollbar-width: none;
@@ -453,7 +458,13 @@ html[dir="rtl"] input {
   display: block;
 }
 
-#main-menu li.menu-item-has-children > a {
+#main-menu > li.menu-item-has-children a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#main-menu > li.menu-item-has-children > ul > li > a {
   display: flex;
   align-items: center;
   justify-content: space-between;

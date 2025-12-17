@@ -20,7 +20,7 @@ $home_new_travels_button = get_field('home_new_travels_button', $home_page_id);
     <div class="container flex justify-between items-center">
 
         <h2 class="text-3xl md:text-5xl font-extrabold text-cynBlack max-md:text-center max-md:w-full">
-            <?php echo $home_new_travels_title; ?>
+            <?php echo $home_new_travels_title ? $home_new_travels_title : __('سفر های فعال', 'jonubgard'); ?>
         </h2>
 
         <?php if ($home_new_travels_button): ?>

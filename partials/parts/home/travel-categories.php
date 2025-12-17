@@ -6,21 +6,25 @@ $home_page_id = get_option('page_on_front');
 
 $home_travel_goal_title = get_field('home_travel_goal_title', $home_page_id);
 
-// Get all destinations
-$travelExperiences = get_terms([
-    'taxonomy'   => 'experience',
+// Get all product categories except 'uncategorized'
+$uncategorized_term = get_term_by('slug', 'uncategorized', 'product_cat');
+$exclude_ids = $uncategorized_term ? [$uncategorized_term->term_id] : [];
+
+$travelProductCategories = get_terms([
+    'taxonomy'   => 'product_cat',
+    'exclude'    => $exclude_ids,
     'hide_empty' => false,
 ]);
 
-// Filter destinations that have related experiences
-$travelExperiencesList = [];
-if ($travelExperiences && !is_wp_error($travelExperiences)) {
-    foreach ($travelExperiences as $travelExperience) {
-        $travelExperiencesList[] = $travelExperience;
+// Filter destinations that have related product categories
+$travelProductCategoriesList = [];
+if ($travelProductCategories && !is_wp_error($travelProductCategories)) {
+    foreach ($travelProductCategories as $travelProductCategory) {
+        $travelProductCategoriesList[] = $travelProductCategory;
     }
 }
 
-if (!$travelExperiencesList || empty($travelExperiencesList)) return;
+if (!$travelProductCategoriesList || empty($travelProductCategoriesList)) return;
 ?>
 
 <section class="my-14 flex flex-col gap-5 container">
@@ -35,7 +39,7 @@ if (!$travelExperiencesList || empty($travelExperiencesList)) return;
 
     <div class="grid grid-cols-2 grid-rows-6 gap-0 md:grid-cols-8 md:grid-rows-6">
         <?php
-        if ($travelExperiencesList) :
+        if ($travelProductCategoriesList) :
             $grid_classes = [
                 'row-span-2 md:col-span-2 md:row-span-3',
                 'row-span-2 md:col-span-2 md:row-span-3 md:col-start-3',
@@ -44,11 +48,11 @@ if (!$travelExperiencesList || empty($travelExperiencesList)) return;
                 'row-span-2 row-start-5 md:col-span-4 md:row-span-6 md:col-start-5 md:row-start-1 [&_a]:!h-full [&_a>div]:!h-full',
             ];
             $index = 0;
-            foreach ($travelExperiencesList as $travelExperience) :
+            foreach ($travelProductCategoriesList as $travelProductCategory) :
                 $grid_class = isset($grid_classes[$index]) ? $grid_classes[$index] : '';
         ?>
                 <div class="<?php echo esc_attr($grid_class); ?>">
-                    <?php Templates::getCard('destination', ['destination' => $travelExperience]) ?>
+                    <?php Templates::getCard('destination', ['destination' => $travelProductCategory]) ?>
                 </div>
         <?php
                 $index++;

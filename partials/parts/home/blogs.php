@@ -21,7 +21,7 @@ if (!$blogsQuery->have_posts()) return;
     <div class="flex justify-between items-center">
 
         <h2 class="text-3xl md:text-5xl font-extrabold text-cynBlack max-md:text-center max-md:w-full">
-            <?php echo $home_blogs_title; ?>
+            <?php echo $home_blogs_title ? $home_blogs_title : __('وبلاگ ها', 'jonubgard'); ?>
         </h2>
 
         <?php if ($home_blogs_button): ?>

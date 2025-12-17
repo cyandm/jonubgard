@@ -18,7 +18,7 @@ $home_events_title = get_field('home_events_title', $home_page_id);
     <div class="flex items-center">
 
         <h2 class="text-3xl md:text-5xl font-extrabold text-cynBlack max-md:text-center max-md:w-full">
-            <?php echo $home_events_title; ?>
+            <?php echo $home_events_title ? $home_events_title : __('رویدادهای شگفت انگیز', 'jonubgard'); ?>
         </h2>
 
     </div>

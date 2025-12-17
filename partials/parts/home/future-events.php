@@ -12,7 +12,7 @@ $home_future_events_image = get_field('home_future_events_image', $home_page_id)
 
     <div class="container flex flex-col gap-4 justify-center max-md:mb-8">
         <p class="text-3xl md:text-5xl font-bold text-cynWhite md:w-[580px] max-md:text-center max-md:w-full leading-12 md:leading-16">
-            <?php echo $home_future_events_title; ?>
+            <?php echo $home_future_events_title ? $home_future_events_title : __('میخوای از تور ها و رویدادهای آینده با خبرشی؟', 'jonubgard'); ?>
         </p>
 
         <form method="post" class="shadow-item rounded-2xl overflow-hidden md:w-[436px] bg-white/80 flex items-center border border-cynBlack/20">

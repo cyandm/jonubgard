@@ -34,7 +34,7 @@ if (!$popularDestinations || empty($popularDestinations)) return;
     <div class="container flex justify-between items-center">
 
         <h2 class="text-3xl md:text-5xl font-extrabold text-cynBlack max-md:text-center max-md:w-full">
-            <?php echo $home_popular_destinations_title; ?>
+            <?php echo $home_popular_destinations_title ? $home_popular_destinations_title : __('مقصدهای محبوب', 'jonubgard'); ?>
         </h2>
 
         <?php if ($home_popular_destinations_button): ?>

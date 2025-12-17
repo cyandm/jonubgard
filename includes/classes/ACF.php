@@ -46,7 +46,7 @@ class ACF
 
 		//Taxonomies
 		self::forProductDestination();
-		self::forProductExperience();
+		self::forProductCategory();
 
 		//Page Templates
 		self::forContactUs();
@@ -91,9 +91,12 @@ class ACF
 
 		$acfGroup->layoutFields->addTab('home_last_travels', 'سفرهای لحظه آخر');
 		$acfGroup->basicFields->addText('home_last_travels_title', 'عنوان سفرهای لحظه آخر', ['placeholder' => 'سفرهای لحظه آخر', 'width' => '100%']);
+		$acfGroup->relationshipFields->addPostObject('home_last_travels_select', 'انتخاب سفرهای لحظه آخر', ['post_type' => 'product', 'width' => '100%', 'multiple' => 1]);
 
 		$acfGroup->layoutFields->addTab('home_special_offers', 'پیشنهادات ویژه');
 		$acfGroup->basicFields->addText('home_special_offers_title', 'عنوان پیشنهادات ویژه', ['placeholder' => 'پیشنهادات ویژه', 'width' => '100%']);
+		$acfGroup->relationshipFields->addPostObject('home_special_offers_select', 'انتخاب سفرهای پیشنهادات ویژه', ['post_type' => 'product', 'width' => '100%', 'multiple' => 1]);
+
 
 		$acfGroup->layoutFields->addTab('home_events', 'رویداد ها');
 		$acfGroup->basicFields->addText('home_events_title', 'عنوان رویداد ها', ['placeholder' => 'رویداد ها', 'width' => '100%']);
@@ -210,38 +213,23 @@ class ACF
 		$acfGroup->contentFields->addTextEditor('travel_services', 'خدمات تور', ['placeholder' => '• اقامت در هتل‌های ۴ ستاره + ایگلوی شیشه‌ای', 'width' => '50%']);
 		$acfGroup->contentFields->addTextEditor('travel_price_details', 'توضیحات بیشتر در مورد هزینه سفر', ['placeholder' => '۱۳۴۹ دلار', 'width' => '50%']);
 
-
 		$acfGroup->layoutFields->addTab('travel_includes_excludes', 'اطلاعات تور ( شامل / بجز)');
-		$travel_fields = [
-			'travel_hotel_stay' => 'اقامت هتل',
-			'travel_breakfast' => 'صبحانه',
-			'travel_transfers_included' => 'تمامی ترانسفرها',
-			'travel_tour_leader' => 'لیدر همراه',
-			'travel_insurance' => 'بیمه مسافرتی',
-			'travel_triberka_village' => 'روستای تریبرکا',
-			'travel_dog_sledding' => 'سورتمه سواری',
-			'travel_glass_igloo' => 'ایگلو شیشه‌ای',
-			'travel_included_tour' => 'گشت روی تور',
-			'travel_included_meal' => 'وعده غذایی',
-			'travel_night_walk' => 'شب گردی',
-			'travel_excess_foreign_currency' => 'مقادیر زیاد ارز خارجی',
-			'travel_weapons' => 'سلاح و مهمات',
-			'travel_pets_without_health_certificate' => 'حیوانات خانگی بدون گواهی سلامت',
-			'travel_drugs' => 'مواد مخدر',
-			'travel_psychoactive_meds' => 'داروهای روانگردان',
-			'travel_optional_tour' => 'گشت آپشنال',
-		];
 
-		foreach ($travel_fields as $field_name => $label) {
-			$acfGroup->choiceFields->addRadio($field_name, $label, [
-				'choices' => ['yes' => 'بله', 'no' => 'خیر'],
-				'width' => '25%'
+		for ($i = 1; $i <= 40; $i++) {
+			$acfGroup->basicFields->addText('travel_feature_label_' . $i, 'عنوان ویژگی ' . $i, [
+				'placeholder' => 'مثال: اقامت هتل، صبحانه، ایگلو شیشه‌ای، ...',
+				'width' => '50%'
+			]);
+
+			$acfGroup->choiceFields->addRadio('travel_feature_status_' . $i, 'وضعیت ویژگی ' . $i, [
+				'choices' => ['yes' => 'شامل', 'no' => 'شامل نمیشود'],
+				'default_value' => 'no',
+				'layout' => 'horizontal',
+				'width' => '50%'
 			]);
 		}
 
 		$acfGroup->layoutFields->addTab('travel_plans', 'پلن سفر');
-
-
 		$total_days = 20;
 
 		for ($i = 1; $i <= $total_days; $i++) {
@@ -374,21 +362,21 @@ class ACF
 		$acfGroup->register('destination');
 	}
 
-	private static function forProductExperience()
+	private static function forProductCategory()
 	{
 		//define helper
 		$acfGroup = new AcfGroup();
 
 		//add fields
-		$acfGroup->contentFields->addImage('product_experience_card_image', 'عکس تجربه جهت نمایش در کارت', [
+		$acfGroup->contentFields->addImage('product_category_card_image', 'عکس دسته بندی جهت نمایش در کارت', [
 			'width' => '100%',
 		]);
 
 		//location
-		$acfGroup->setLocation('taxonomy', '==', 'experience');
+		$acfGroup->setLocation('taxonomy', '==', 'product_cat');
 
 		// register group
-		$acfGroup->register('experience');
+		$acfGroup->register('product_category');
 	}
 
 	private static function forEvents()
@@ -399,10 +387,12 @@ class ACF
 		//add fields
 		$acfGroup->basicFields->addText('event_date', 'تاریخ رویداد', [
 			'width' => '100%',
+			'required' => true,
 		]);
 
 		$acfGroup->relationshipFields->addLink('event_button', 'لینک و متن دکمه رویداد', [
 			'width' => '100%',
+			'required' => true,
 		]);
 
 		//location

@@ -25,7 +25,7 @@ if (!$home_your_camera_title || !$home_your_camera_content || !$home_your_camera
 
             <div class="flex flex-col gap-2 md:gap-4 w-full">
 
-                <div class="text-3xl font-extrabold md:text-5xl"><?php echo $home_your_camera_title; ?></div>
+                <div class="text-3xl font-extrabold md:text-5xl"><?php echo $home_your_camera_title ? $home_your_camera_title : __('از دوربین شما', 'jonubgard'); ?></div>
 
                 <div class="text-base md:text-2xl font-medium text-cynBlack leading-8 md:leading-9"><?php echo $home_your_camera_content; ?></div>
 

@@ -4,11 +4,11 @@
  * Destination Card Template
  * @package CyanTheme
  * 
- * Supports multiple taxonomies: 'destination' and 'experience'
+ * Supports multiple taxonomies: 'destination' and 'product_cat'
  * 
  * Args:
  * - destination: (required) Term object
- * - variant: (optional) 'default' | 'experience' - Controls display variant
+ * - variant: (optional) 'default' | 'product_cat' - Controls display variant
  * - show_tour_count: (optional) true/false - Show/hide tour count (default: true)
  */
 
@@ -32,11 +32,11 @@ $term_link = get_term_link($destination);
 $term_image = null;
 if ($term_taxonomy === 'destination') {
     $term_image = get_field('product_destination_card_image', 'destination_' . $term_id);
-} elseif ($term_taxonomy === 'experience') {
-    // Try experience image field, fallback to destination field name
-    $term_image = get_field('product_destination_card_image', 'experience_' . $term_id);
+} elseif ($term_taxonomy === 'product_cat') {
+    // Try product_cat image field, fallback to destination field name
+    $term_image = get_field('product_category_card_image', 'product_cat_' . $term_id);
     if (!$term_image) {
-        $term_image = get_field('product_experience_card_image', 'experience_' . $term_id);
+        $term_image = get_field('product_category_card_image', 'product_cat_' . $term_id);
     }
 }
 

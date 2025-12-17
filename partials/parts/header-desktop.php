@@ -34,7 +34,7 @@ use Cyan\Theme\Helpers\Icon;
 			<div class="desktop-menu hidden lg:flex">
 				<?php wp_nav_menu([
 					'menu_id' => 'main-menu',
-					'menu_class' => 'gap-8 text-xl font-semibold flex text-cynBlack [&_li]:pt-1 [&>li:hover]:text-cynOrange [&>li>ul>li:hover]:text-cynOrange [&_li]:duration-200 [&_li]:transition-all',
+					'menu_class' => 'gap-8 text-xl font-semibold flex text-cynBlack [&_li]:pt-1 [&>li:hover]:text-cynOrange [&>li>ul>li:hover]:text-cynOrange [&_li]:duration-200 [&_li]:transition-all [&_li_a_svg]:transition-all [&_li_a_svg]:duration-200 [&_li:hover_svg]:rotate-180 [&_li:hover_svg]:text-cynOrange',
 					'depth' => '3',
 					'theme_location' => 'header-menu',
 					'container' => 'ul'
@@ -51,7 +51,7 @@ use Cyan\Theme\Helpers\Icon;
 			</a>
 
 			<div class="relative flex justify-center group" id="login-btn">
-				<a href="<?= !is_user_logged_in() ? get_site_url() . '/login' : '#' ?>" class="flex items-center justify-center gap-1 min-w-28 md:min-w-36 text-cynBlack group-hover:!bg-white py-2 ps-4 pe-3 md:ps-6 md:pe-3 rounded-2xl text-xs md:text-xl font-medium max-md:!py-2 shadow-item border border-transparent group-hover:border-cynOrange transition-all duration-300">
+				<a href="<?= !is_user_logged_in() ? get_site_url() . '/login' : '#' ?>" class="flex items-center justify-center gap-1 min-w-28 md:min-w-36 text-cynBlack bg-white py-2 ps-4 pe-3 md:ps-6 md:pe-3 rounded-2xl text-xs md:text-xl font-medium max-md:!py-2 shadow-item border border-transparent group-hover:border-cynOrange transition-all duration-300">
 
 					<span class="pt-0.5 whitespace-nowrap"><?= is_user_logged_in() ? esc_html(wp_get_current_user()->display_name) : __('ورود / ثبت نام', 'jonubgard'); ?></span>
 
@@ -69,7 +69,7 @@ use Cyan\Theme\Helpers\Icon;
 
 						<?php wp_nav_menu([
 							'menu_id' => 'login-menu',
-							'menu_class' => 'flex flex-col gap-2 text-xs font-semibold text-cynBlack [&_li:nth-child(even)]:border-t [&_li:nth-child(even)]:border-[#F4F4F6] [&_li]:py-2 [&>li>a:hover]:text-cynOrange [&_li_a]:duration-200 [&_li_a]:transition-all',
+							'menu_class' => 'flex flex-col gap-2 text-xs font-semibold text-cynBlack [&_li]:first:border-t-0 [&_li]:border-t [&_li]:border-[#F4F4F6] [&_li]:py-2 [&>li>a:hover]:text-cynOrange [&_li_a]:duration-200 [&_li_a]:transition-all',
 							'depth' => '3',
 							'theme_location' => 'login-menu',
 							'container' => 'ul'

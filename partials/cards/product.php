@@ -92,7 +92,7 @@ $price_payment_discount = get_field('travel_payment_discount', $product_id);
             </div>
 
             <?php if ($product_price) : ?>
-                <div class="bg-cynWhite/50 font-semibold text-sm [&_span]:pt-1 border border-cynWhite/40 backdrop-blur-2xl text-cynWhite px-3 py-1 flex items-center justify-between rounded-md">
+                <div class="bg-cynWhite/50 font-semibold text-sm pt-1.5 border border-cynWhite/40 backdrop-blur-2xl text-cynWhite px-3 py-1 flex items-center justify-between rounded-md">
                     <span><?php _e('پیش پرداخت', 'jonubgard'); ?></span>
                     <?php echo $product_price; ?>
                 </div>

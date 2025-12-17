@@ -166,13 +166,13 @@ class Customize
 			]
 		);
 
-		self::addControl('social_section', 'text', "telegram_link", "لینک تلگرام");
 		self::addControl('social_section', 'text', "telegram_text", "نام کاربری تلگرام");
-		self::addControl('social_section', 'text', "instagram_link", "لینک اینستاگرام");
+		self::addControl('social_section', 'text', "telegram_link", "لینک تلگرام");
 		self::addControl('social_section', 'text', "instagram_text", "نام کاربری اینستاگرام");
+		self::addControl('social_section', 'text', "instagram_link", "لینک اینستاگرام");
 		self::addControl('social_section', 'text', "whatsapp_number", "شماره واتس اپ");
-		self::addControl('social_section', 'text', "twitter_link", "لینک توییتر (X)");
 		self::addControl('social_section', 'text', "twitter_text", "نام کاربری توییتر (X)");
+		self::addControl('social_section', 'text', "twitter_link", "لینک توییتر (X)");
 		self::addControl('social_section', 'text', "email_address", "ایمیل");
 
 		self::addControl('address_section', 'text', "address_text", "متن ادرس");
