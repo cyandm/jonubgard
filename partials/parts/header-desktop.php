@@ -51,17 +51,16 @@ use Cyan\Theme\Helpers\Icon;
 			</a>
 
 			<div class="relative flex justify-center group" id="login-btn">
-				<a href="<?= !is_user_logged_in() ? get_site_url() . '/login' : '#' ?>" class="flex items-center justify-center gap-1 min-w-28 md:min-w-36 text-cynBlack bg-white py-2 ps-4 pe-3 md:ps-6 md:pe-3 rounded-2xl text-xs md:text-xl font-medium max-md:!py-2 shadow-item border border-transparent group-hover:border-cynOrange transition-all duration-300">
+				<a href="<?= !is_user_logged_in() ? get_site_url() . '/login' : '#' ?>" class="flex items-center justify-center gap-1 min-w-28 md:min-w-36 text-cynBlack bg-white py-3 md:py-2 ps-4 pe-4 <?php echo is_user_logged_in() ? 'md:!ps-6 !pe-3' : ''; ?> rounded-2xl text-xs md:text-xl font-medium shadow-item border border-transparent group-hover:border-cynOrange transition-all duration-300">
 
 					<span class="pt-0.5 whitespace-nowrap"><?= is_user_logged_in() ? esc_html(wp_get_current_user()->display_name) : __('ورود / ثبت نام', 'jonubgard'); ?></span>
 
-					<i class="size-6 text-cynBlack group-hover:text-cynOrange group-hover:rotate-180 transition-all duration-300">
-						<?php
-						if (is_user_logged_in()) {
-							Icon::print('Arrow-28');
-						}
-						?>
-					</i>
+					<?php if (is_user_logged_in()): ?>
+						<i class="size-6 text-cynBlack group-hover:text-cynOrange group-hover:rotate-180 transition-all duration-300">
+							<?php Icon::print('Arrow-28'); ?>
+						</i>
+					<?php endif; ?>
+
 				</a>
 
 				<?php if (is_user_logged_in()) : ?>

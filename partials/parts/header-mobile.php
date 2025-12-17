@@ -37,7 +37,7 @@ $twitter_text = get_option('twitter_text');
 
       </div>
 
-      <div class="flex gap-3 flex-col text-cynBlack text-sm font-medium my-8">
+      <div class="flex gap-3 flex-col text-cynBlack text-sm font-medium mt-8 mb-12">
 
             <?php if ($phone_number || $telegram_link || $instagram_link || $whatsapp_link) : ?>
 
