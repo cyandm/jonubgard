@@ -557,305 +557,123 @@ input[type="number"] {
    WooCommerce Checkout Page Styles
    ======================================== */
 
-/* Main Checkout Layout - Two Columns */
-/* .woocommerce-checkout {
-  @apply container py-8;
-  background-color: #f2f2f2;
-  min-height: 100vh;
+/* Form Checkout Layout - Two Columns */
+form.woocommerce-checkout {
+  @apply flex flex-wrap gap-3 relative;
 }
 
-body.woocommerce-checkout {
-  @apply bg-cynBG;
+form.woocommerce-checkout .blockUI {
+  @apply !rounded-2xl overflow-hidden;
 }
 
-.woocommerce-checkout .col2-set {
-  @apply grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6;
+form.woocommerce-checkout .woocommerce-NoticeGroup-checkout {
+  @apply !w-full;
 }
 
-.woocommerce-checkout .col-1,
-.woocommerce-checkout .col-2 {
-  @apply w-full;
-} */
-
-/* Billing Details Section - Right Column */
-/* .woocommerce-checkout #customer_details {
-  @apply order-2 lg:order-1;
+.woocommerce .woocommerce-notices-wrapper,
+.woocommerce .woocommerce-form-coupon-toggle .woocommerce-info {
+  @apply border-cynOrange bg-cynWhite text-base font-semibold text-cynBlack;
 }
 
-.woocommerce-checkout #customer_details h3 {
-  @apply text-2xl font-bold text-cynBlack mb-6;
+.woocommerce .woocommerce-form-coupon-toggle .showcoupon {
+  @apply text-cynOrange px-1 animate-pulse;
 }
 
-.woocommerce-checkout .woocommerce-billing-fields,
-.woocommerce-checkout .woocommerce-shipping-fields {
-  @apply bg-cynWhite rounded-3xl p-6;
-  box-shadow: 0px 4px 9px 0px #00000024;
+.woocommerce .woocommerce-form-coupon-toggle .woocommerce-info {
+  @apply rounded-2xl;
 }
 
-.woocommerce-checkout .woocommerce-billing-fields__field-wrapper,
-.woocommerce-checkout .woocommerce-shipping-fields__field-wrapper {
-  @apply flex flex-col gap-4;
+.woocommerce-info::before {
+  font-family: WooCommerce !important;
+  @apply text-cynOrange size-6 bg-no-repeat bg-center bg-contain -mt-0.5;
+  content: url("/wp-content/themes/jonubgard/assets/image/discount.svg");
 }
 
-.woocommerce-checkout .form-row {
-  @apply flex flex-col gap-2;
+.woocommerce-error {
+  @apply text-lg font-medium;
 }
 
-.woocommerce-checkout .form-row label {
-  @apply text-sm font-semibold text-cynBlack;
+.woocommerce-error::before {
+  @apply !text-lg;
 }
 
-.woocommerce-checkout .form-row input[type="text"],
-.woocommerce-checkout .form-row input[type="email"],
-.woocommerce-checkout .form-row input[type="tel"],
-.woocommerce-checkout .form-row input[type="number"],
-.woocommerce-checkout .form-row input[type="date"],
-.woocommerce-checkout .form-row select,
-.woocommerce-checkout .form-row textarea {
-  @apply w-full px-4 py-3 rounded-2xl border border-cynBorder bg-cynWhite text-cynBlack text-base focus:outline-none focus:ring-2 focus:ring-cynOrange focus:border-cynOrange transition-all duration-200;
+.woocommerce-error strong {
+  @apply !text-lg !font-semibold;
 }
 
-.woocommerce-checkout .form-row select {
-  @apply appearance-none bg-no-repeat bg-right pr-10;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%232a2a2a' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
-  background-position: right 1rem center;
-} */
-
-/* Order Review Section - Left Column */
-/* .woocommerce-checkout #order_review {
-  @apply order-1 lg:order-2;
+form.woocommerce-checkout .col-1 {
+  @apply !w-full;
 }
 
-.woocommerce-checkout #order_review_heading {
+form.woocommerce-checkout .col-2 {
+  @apply !w-full;
+}
+
+form.woocommerce-checkout #customer_details {
+  @apply p-4 md:p-6 bg-cynWhite rounded-3xl shadow-[0px-4px-9px-0px-#00000024] h-fit w-full lg:!w-[calc(56%-6px)];
+}
+
+form.woocommerce-checkout #customer_details h3 {
+  @apply text-xl font-bold text-cynBlack;
+}
+
+form.woocommerce-checkout #order_review {
+  @apply p-4 md:p-6 bg-cynWhite rounded-3xl shadow-[0px-4px-9px-0px-#00000024] h-fit sticky top-4 w-full lg:!w-[calc(44%-6px)];
+}
+
+form.woocommerce-checkout label {
+  @apply text-xl font-medium text-cynBlack;
+}
+
+form.woocommerce-checkout input {
+  @apply !border !border-cynBorder !rounded-2xl !p-3 text-base font-medium text-cynBlack focus-visible:!outline-cynOrange focus:!outline-cynOrange transition-all duration-200 !shadow-cynOrange;
+}
+
+form.woocommerce-checkout .passenger-input {
+  @apply !border !border-cynBorder !rounded-2xl !p-3 text-base font-medium text-cynBlack;
+}
+
+form.woocommerce-checkout .passenger-contract {
+  @apply !text-xl !font-medium !text-cynRed;
+}
+
+form.woocommerce-checkout .passenger-contract a {
+  @apply px-1 !font-semibold !no-underline;
+}
+
+form.woocommerce-checkout #order_review h3 {
+  @apply text-2xl font-bold text-cynBlack;
+}
+
+form.woocommerce-checkout .shop_table {
+  @apply !rounded-2xl;
+}
+
+form.woocommerce-checkout .shop_table th {
+  @apply text-lg font-bold text-cynBlack;
+}
+
+form.woocommerce-checkout .shop_table td {
+  @apply text-base font-semibold text-cynBlack;
+}
+
+form.woocommerce-checkout .shop_table .cart_item bdi {
+  @apply text-base font-semibold text-cynBlack;
+}
+
+form.woocommerce-checkout .shop_table .order-total {
+  @apply !text-xl !font-semibold;
+}
+
+form.woocommerce-checkout .shop_table .cart-subtotal,
+form.woocommerce-checkout .shop_table .product-quantity {
   @apply hidden;
-} */
-
-/* Order Review Cards */
-/* .woocommerce-checkout-review-order {
-  @apply flex flex-col gap-6;
-} */
-
-/* Total Cart Card */
-/* .woocommerce-checkout-review-order .shop_table {
-  @apply bg-cynWhite rounded-3xl p-6;
-  box-shadow: 0px 4px 9px 0px #00000024;
 }
 
-.woocommerce-checkout-review-order .shop_table thead th {
-  @apply text-xl font-bold text-cynBlack pb-4 mb-4 border-b border-cynBorder;
+form.woocommerce-checkout .woocommerce-checkout-payment {
+  @apply !rounded-2xl;
 }
 
-.woocommerce-checkout-review-order .shop_table tbody tr {
-  @apply border-b border-cynBorder last:border-b-0;
+form.woocommerce-checkout #place_order {
+  @apply pb-3 pt-3.5 px-6 bg-cynOrange shadow-[0px-4px-9px-0px-#00000024] text-xl font-medium rounded-2xl hover:bg-cynHover hover:text-cynWhite transition-all duration-300;
 }
-
-.woocommerce-checkout-review-order .shop_table tbody td {
-  @apply py-3 text-base text-cynBlack;
-}
-
-.woocommerce-checkout-review-order .cart-subtotal td,
-.woocommerce-checkout-review-order .order-total td {
-  @apply font-semibold;
-}
-
-.woocommerce-checkout-review-order .order-total {
-  @apply border-t-2 border-cynBorder mt-4 pt-4;
-}
-
-.woocommerce-checkout-review-order .order-total td {
-  @apply text-xl font-bold text-cynOrange;
-} */
-
-/* Wallet Balance Input */
-/* .woocommerce-checkout input[name="wallet_balance"] {
-  @apply w-full px-4 py-3 rounded-2xl border border-cynBorder bg-cynWhite text-cynBlack text-base focus:outline-none focus:ring-2 focus:ring-cynOrange focus:border-cynOrange transition-all duration-200;
-} */
-
-/* Payment Method Radio Buttons */
-/* .woocommerce-checkout .wc_payment_methods {
-  @apply list-none p-0 m-0 flex flex-col gap-3;
-}
-
-.woocommerce-checkout .wc_payment_methods li {
-  @apply flex items-center gap-3;
-}
-
-.woocommerce-checkout .wc_payment_methods input[type="radio"] {
-  @apply w-6 h-6 appearance-none border-2 border-cynBorder rounded-full cursor-pointer relative;
-  @apply checked:border-cynOrange checked:bg-cynWhite;
-}
-
-.woocommerce-checkout .wc_payment_methods input[type="radio"]:checked::before {
-  content: "";
-  @apply absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-3 h-3 bg-cynOrange rounded-full;
-}
-
-.woocommerce-checkout .wc_payment_methods label {
-  @apply text-base font-semibold text-cynBlack cursor-pointer;
-} */
-
-/* Payment Box */
-/* .woocommerce-checkout .payment_box {
-  @apply mt-4 p-4 bg-cynBG rounded-2xl;
-} */
-
-/* Discount Code Card */
-/* .woocommerce-checkout .coupon {
-  @apply bg-cynWhite rounded-3xl p-6;
-  box-shadow: 0px 4px 9px 0px #00000024;
-}
-
-.woocommerce-checkout .coupon h3 {
-  @apply text-xl font-bold text-cynBlack mb-4 flex items-center gap-2;
-}
-
-.woocommerce-checkout .coupon .input-text {
-  @apply flex-1 px-4 py-3 rounded-2xl border border-cynBorder bg-cynWhite text-cynBlack text-base focus:outline-none focus:ring-2 focus:ring-cynOrange focus:border-cynOrange transition-all duration-200;
-}
-
-.woocommerce-checkout .coupon .button {
-  @apply bg-cynOrange text-cynWhite px-6 py-3 rounded-2xl font-semibold hover:bg-cynHover transition-all duration-300;
-} */
-
-/* Payment Gateway Cards */
-/* .woocommerce-checkout .wc_payment_methods .payment_box_payment_methods {
-  @apply grid grid-cols-1 md:grid-cols-3 gap-4 mt-4;
-}
-
-.woocommerce-checkout .payment_methods {
-  @apply bg-cynWhite rounded-3xl p-6;
-  box-shadow: 0px 4px 9px 0px #00000024;
-}
-
-.woocommerce-checkout .payment_methods h3 {
-  @apply text-xl font-bold text-cynBlack mb-4;
-}
-
-.woocommerce-checkout .payment_methods .wc_payment_methods {
-  @apply grid grid-cols-1 md:grid-cols-3 gap-4;
-}
-
-.woocommerce-checkout .payment_methods .wc_payment_methods li {
-  @apply flex flex-col items-center justify-center p-4 border-2 border-cynBorder rounded-2xl cursor-pointer transition-all duration-300 hover:border-cynOrange;
-}
-
-.woocommerce-checkout .payment_methods .wc_payment_methods li:hover {
-  box-shadow: 0px 4px 9px 0px #00000024;
-}
-
-.woocommerce-checkout
-  .payment_methods
-  .wc_payment_methods
-  li
-  input[type="radio"] {
-  @apply mb-2;
-}
-
-.woocommerce-checkout .payment_methods .wc_payment_methods li label {
-  @apply text-center text-sm font-semibold text-cynBlack;
-}
-
-.woocommerce-checkout .payment_methods .wc_payment_methods li img {
-  @apply mb-2 max-w-16 max-h-16 object-contain;
-} */
-
-/* Place Order Button */
-/* .woocommerce-checkout #place_order {
-  @apply w-full bg-cynBlack text-cynWhite py-4 px-6 rounded-2xl text-xl font-semibold hover:bg-cynHover transition-all duration-300 mt-6;
-} */
-
-/* View Cart Link */
-/* .woocommerce-checkout a[href*="cart"] {
-  @apply text-cynOrange hover:text-cynHover underline;
-} */
-
-/* Payable Amount - Blue Text */
-/* .woocommerce-checkout .order-total .amount,
-.woocommerce-checkout .order-total bdi {
-  @apply text-cynOrange;
-} */
-
-/* Wallet Balance Section */
-/* .woocommerce-checkout .wallet-balance-wrapper {
-  @apply flex items-center gap-2 mt-4;
-}
-
-.woocommerce-checkout .wallet-balance-wrapper input {
-  @apply flex-1;
-}
-
-.woocommerce-checkout .wallet-balance-wrapper span {
-  @apply text-base font-semibold text-cynBlack whitespace-nowrap;
-} */
-
-/* Payment Type Selection */
-/* .woocommerce-checkout .payment-type-selection {
-  @apply flex flex-col gap-3 mt-4;
-}
-
-.woocommerce-checkout .payment-type-selection label {
-  @apply flex items-center gap-3 cursor-pointer;
-} */
-
-/* Payment Gateway Cards - Enhanced */
-/* .woocommerce-checkout .payment_methods .wc_payment_methods li {
-  @apply relative;
-}
-
-.woocommerce-checkout
-  .payment_methods
-  .wc_payment_methods
-  li
-  input[type="radio"]:checked
-  + label {
-  @apply text-cynOrange;
-}
-
-.woocommerce-checkout
-  .payment_methods
-  .wc_payment_methods
-  li:has(input[type="radio"]:checked) {
-  @apply border-cynOrange bg-cynWhite;
-} */
-
-/* Form Field Focus States */
-/* .woocommerce-checkout .form-row input:focus,
-.woocommerce-checkout .form-row select:focus,
-.woocommerce-checkout .form-row textarea:focus {
-  @apply border-cynOrange;
-  box-shadow: 0 0 0 2px rgba(239, 161, 20, 0.2);
-} */
-
-/* Calendar Icon for Date Input */
-/* .woocommerce-checkout input[type="date"] {
-  @apply relative;
-}
-
-.woocommerce-checkout input[type="date"]::-webkit-calendar-picker-indicator {
-  @apply cursor-pointer opacity-60 hover:opacity-100;
-} */
-
-/* Gender Dropdown Styling */
-/* .woocommerce-checkout select[name*="gender"],
-.woocommerce-checkout select[name*="جنسیت"] {
-  @apply cursor-pointer;
-} */
-
-/* Responsive */
-/* @media (max-width: 1024px) {
-  .woocommerce-checkout .col2-set {
-    @apply grid-cols-1;
-  }
-
-  .woocommerce-checkout #customer_details {
-    @apply order-1;
-  }
-
-  .woocommerce-checkout #order_review {
-    @apply order-2;
-  }
-
-  .woocommerce-checkout .payment_methods .wc_payment_methods {
-    @apply grid-cols-1;
-  }
-} */

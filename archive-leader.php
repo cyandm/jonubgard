@@ -15,7 +15,7 @@ get_header(); ?>
 
     <section class="container mb-3 md:mb-5">
 
-        <h1 class="text-3xl md:text-5xl font-extrabold text-cynBlack max-md:text-center">تورلیدرهای جنوبگرد</h1>
+        <h1 class="text-3xl md:text-5xl font-extrabold text-cynBlack max-md:text-center"><?php _e('تورلیدرهای جنوبگرد', 'jonubgard'); ?></h1>
 
     </section>
 

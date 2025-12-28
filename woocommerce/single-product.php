@@ -146,7 +146,7 @@ $child_price = 0; // کودکان رایگان هستند - فقط در سفار
 				<span class="size-7 -mt-1">
 					<?php Icon::print('Share-1') ?>
 				</span>
-				<?php _e('اشتراک گذاری') ?>
+				<?php _e('اشتراک گذاری', 'jonubgard'); ?>
 			</button>
 		</div>
 
@@ -562,12 +562,12 @@ $child_price = 0; // کودکان رایگان هستند - فقط در سفار
 
 			<?php
 			$tabs = [
-				['id' => 'tab_1', 'label' => 'جزییات کلی'],
-				['id' => 'tab_2', 'label' => 'اطلاعات تور'],
-				['id' => 'tab_3', 'label' => 'پلن تور'],
-				['id' => 'tab_4', 'label' => 'چک لیست'],
-				['id' => 'tab_5', 'label' => 'نکات مهم'],
-				['id' => 'tab_6', 'label' => 'نظرات'],
+				['id' => 'tab_1', 'label' => __('جزییات کلی', 'jonubgard')],
+				['id' => 'tab_2', 'label' => __('اطلاعات تور', 'jonubgard')],
+				['id' => 'tab_3', 'label' => __('پلن تور', 'jonubgard')],
+				['id' => 'tab_4', 'label' => __('چک لیست', 'jonubgard')],
+				['id' => 'tab_5', 'label' => __('نکات مهم', 'jonubgard')],
+				['id' => 'tab_6', 'label' => __('نظرات', 'jonubgard')],
 			];
 			?>
 
@@ -581,7 +581,7 @@ $child_price = 0; // کودکان رایگان هستند - فقط در سفار
 
 	</section>
 
-	<section class="travel-tabs-content container mt-14 flex gap-3.5 overflow-x-hidden">
+	<section class="travel-tabs-content container mt-14 flex gap-3.5">
 
 		<div class="w-full lg:w-2/3">
 
@@ -848,7 +848,7 @@ $child_price = 0; // کودکان رایگان هستند - فقط در سفار
 
 					<!-- Guest Name -->
 					<div class="w-full">
-						<input type="text" name="booking_guest_name" id="guest-name" class="h-[72px] p-3 border border-cynBorder rounded-2xl w-full text-right text-base font-medium outline-none bg-transparent placeholder:text-[#9E9E9E]" required placeholder="<?php _e('نام مهمان', 'jonubgard'); ?>" />
+						<input type="text" name="booking_guest_name" id="guest-name" class="h-[72px] p-3 border border-cynBorder rounded-2xl w-full text-right text-base font-medium outline-none bg-transparent placeholder:text-[#9E9E9E]" placeholder="<?php _e('نام مهمان', 'jonubgard'); ?>" />
 					</div>
 
 					<!-- Total Cost -->

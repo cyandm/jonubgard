@@ -129,8 +129,8 @@ get_header();
         <section class="travelogue my-14">
             <div class="w-full">
                 <a href="<?php echo $travelogue_image_link['url']; ?>">
-                    <img src="<?php echo wp_get_attachment_image_url($travelogue_image_desktop, 'full'); ?>" alt="بنر سفرنامه" class="w-full h-full object-cover max-md:hidden">
-                    <img src="<?php echo wp_get_attachment_image_url($travelogue_image_mobile, 'full'); ?>" alt="بنر سفرنامه" class="w-full h-full object-cover md:hidden">
+                    <img src="<?php echo wp_get_attachment_image_url($travelogue_image_desktop, 'full'); ?>" alt="<?php esc_attr_e('بنر سفرنامه', 'jonubgard'); ?>" class="w-full h-full object-cover max-md:hidden">
+                    <img src="<?php echo wp_get_attachment_image_url($travelogue_image_mobile, 'full'); ?>" alt="<?php esc_attr_e('بنر سفرنامه', 'jonubgard'); ?>" class="w-full h-full object-cover md:hidden">
                 </a>
             </div>
         </section>

@@ -25,6 +25,8 @@ import { Finder } from "./functions/finder";
 import { SearchPage } from "./functions/search";
 import { Htmx } from "./functions/htmx";
 import { TextForm } from "./functions/textForm";
+import { CheckoutLoginModal } from "./functions/checkoutLoginModal";
+import { ProductReviews } from "./functions/productReviews";
 
 Modals();
 setVariables();
@@ -48,3 +50,5 @@ Finder();
 SearchPage();
 Htmx();
 TextForm();
+CheckoutLoginModal();
+ProductReviews();

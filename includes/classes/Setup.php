@@ -29,5 +29,7 @@ class Setup
 		Finder::init();
 
 		Search::init();
+
+		WooCommerce::init();
 	}
 }
