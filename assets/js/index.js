@@ -27,6 +27,7 @@ import { Htmx } from "./functions/htmx";
 import { TextForm } from "./functions/textForm";
 import { CheckoutLoginModal } from "./functions/checkoutLoginModal";
 import { ProductReviews } from "./functions/productReviews";
+import { CheckoutCoupon, CheckoutLayout } from "./functions/checkoutLayout";
 
 Modals();
 setVariables();
@@ -52,3 +53,5 @@ Htmx();
 TextForm();
 CheckoutLoginModal();
 ProductReviews();
+CheckoutCoupon();
+CheckoutLayout();

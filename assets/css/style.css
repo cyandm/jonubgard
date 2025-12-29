@@ -580,12 +580,13 @@ form.woocommerce-checkout .woocommerce-NoticeGroup-checkout {
 }
 
 .woocommerce .woocommerce-form-coupon-toggle .woocommerce-info {
-  @apply rounded-2xl;
+  @apply rounded-2xl !border !border-[#0000001a] !mb-4 !p-4 !px-10;
+  padding: 1em 3.5em 1em 2em;
 }
 
 .woocommerce-info::before {
   font-family: WooCommerce !important;
-  @apply text-cynOrange size-6 bg-no-repeat bg-center bg-contain -mt-0.5;
+  @apply text-cynOrange size-6 bg-no-repeat bg-center bg-contain -mt-0.5 !right-3;
   content: url("/wp-content/themes/jonubgard/assets/image/discount.svg");
 }
 
@@ -646,7 +647,7 @@ form.woocommerce-checkout #order_review h3 {
 }
 
 form.woocommerce-checkout .shop_table {
-  @apply !rounded-2xl;
+  @apply !rounded-2xl !mb-4;
 }
 
 form.woocommerce-checkout .shop_table th {
@@ -676,4 +677,28 @@ form.woocommerce-checkout .woocommerce-checkout-payment {
 
 form.woocommerce-checkout #place_order {
   @apply pb-3 pt-3.5 px-6 bg-cynOrange shadow-[0px-4px-9px-0px-#00000024] text-xl font-medium rounded-2xl hover:bg-cynHover hover:text-cynWhite transition-all duration-300;
+}
+
+form.woocommerce-form-coupon {
+  @apply !p-0 !m-0 !mt-2 !border-none flex items-start flex-wrap md:flex-nowrap gap-2;
+}
+
+form.woocommerce-form-coupon .form-row {
+  @apply !m-0 !p-0;
+}
+
+form.woocommerce-form-coupon .form-row-first {
+  @apply !w-full md:!w-4/6;
+}
+
+form.woocommerce-form-coupon .form-row-last {
+  @apply !w-full md:!w-2/6;
+}
+
+form.woocommerce-form-coupon .form-row-last .button {
+  @apply !w-fit md:!w-full !text-base !font-medium !text-cynWhite !bg-cynOrange !rounded-2xl !shadow-cynOrange hover:!bg-cynHover hover:!text-cynWhite transition-all duration-300;
+}
+
+form.woocommerce-form-coupon .coupon-error-notice {
+  @apply !text-base !font-medium;
 }

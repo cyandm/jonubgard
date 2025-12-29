@@ -4001,10 +4001,18 @@ form.woocommerce-checkout .woocommerce-NoticeGroup-checkout {
   color: var(--color-cynOrange);
 }
 .woocommerce .woocommerce-form-coupon-toggle .woocommerce-info {
+  margin-bottom: calc(var(--spacing) * 4) !important;
   border-radius: var(--radius-2xl);
+  border-style: var(--tw-border-style) !important;
+  border-width: 1px !important;
+  border-color: #0000001a !important;
+  padding: calc(var(--spacing) * 4) !important;
+  padding-inline: calc(var(--spacing) * 10) !important;
+  padding: 1em 3.5em 1em 2em;
 }
 .woocommerce-info::before {
   font-family: WooCommerce !important;
+  right: calc(var(--spacing) * 3) !important;
   margin-top: calc(var(--spacing) * -0.5);
   width: calc(var(--spacing) * 6);
   height: calc(var(--spacing) * 6);
@@ -4139,6 +4147,7 @@ form.woocommerce-checkout #order_review h3 {
   color: var(--color-cynBlack);
 }
 form.woocommerce-checkout .shop_table {
+  margin-bottom: calc(var(--spacing) * 4) !important;
   border-radius: var(--radius-2xl) !important;
 }
 form.woocommerce-checkout .shop_table th {
@@ -4201,6 +4210,71 @@ form.woocommerce-checkout #place_order {
       color: var(--color-cynWhite);
     }
   }
+}
+form.woocommerce-form-coupon {
+  margin: calc(var(--spacing) * 0) !important;
+  margin-top: calc(var(--spacing) * 2) !important;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: calc(var(--spacing) * 2);
+  --tw-border-style: none;
+  border-style: none !important;
+  padding: calc(var(--spacing) * 0) !important;
+  @media (width >= 48rem) {
+    flex-wrap: nowrap;
+  }
+}
+form.woocommerce-form-coupon .form-row {
+  margin: calc(var(--spacing) * 0) !important;
+  padding: calc(var(--spacing) * 0) !important;
+}
+form.woocommerce-form-coupon .form-row-first {
+  width: 100% !important;
+  @media (width >= 48rem) {
+    width: calc(4/6 * 100%) !important;
+  }
+}
+form.woocommerce-form-coupon .form-row-last {
+  width: 100% !important;
+  @media (width >= 48rem) {
+    width: calc(2/6 * 100%) !important;
+  }
+}
+form.woocommerce-form-coupon .form-row-last .button {
+  width: fit-content !important;
+  border-radius: var(--radius-2xl) !important;
+  background-color: var(--color-cynOrange) !important;
+  font-size: var(--text-base) !important;
+  line-height: var(--tw-leading, var(--text-base--line-height)) !important;
+  --tw-font-weight: var(--font-weight-medium);
+  font-weight: var(--font-weight-medium) !important;
+  color: var(--color-cynWhite) !important;
+  --tw-shadow-color: var(--color-cynOrange);
+  transition-property: all;
+  transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+  transition-duration: var(--tw-duration, var(--default-transition-duration));
+  --tw-duration: 300ms;
+  transition-duration: 300ms;
+  &:hover {
+    @media (hover: hover) {
+      background-color: var(--color-cynHover) !important;
+    }
+  }
+  &:hover {
+    @media (hover: hover) {
+      color: var(--color-cynWhite) !important;
+    }
+  }
+  @media (width >= 48rem) {
+    width: 100% !important;
+  }
+}
+form.woocommerce-form-coupon .coupon-error-notice {
+  font-size: var(--text-base) !important;
+  line-height: var(--tw-leading, var(--text-base--line-height)) !important;
+  --tw-font-weight: var(--font-weight-medium);
+  font-weight: var(--font-weight-medium) !important;
 }
 @property --tw-translate-x {
   syntax: "*";
