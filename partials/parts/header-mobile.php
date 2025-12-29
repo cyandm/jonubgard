@@ -8,7 +8,7 @@ $telegram_link = get_option('telegram_link');
 $telegram_text = get_option('telegram_text');
 $instagram_link = get_option('instagram_link');
 $instagram_text = get_option('instagram_text');
-$whatsapp_link = get_option('whatsapp_link');
+$whatsapp_number = get_option('whatsapp_number');
 $twitter_link = get_option('twitter_link');
 $twitter_text = get_option('twitter_text');
 ?>
@@ -31,7 +31,7 @@ $twitter_text = get_option('twitter_text');
                   'menu_id' => 'mobile-menu',
                   'menu_class' => 'gap-0.5 [&>li]:border-t [&>li]:border-[#F4F4F6] [&>li]:first:border-t-0 flex-col text-cynBlack [&_li_a]:flex [&_li_a]:pb-2 [&_li_a]:pt-3 [&_li_a]:w-full text-xl font-semibold [&_li_ul_li_a]:pr-3',
                   'depth' => '3',
-                  'theme_location' => 'header-menu',
+                  'theme_location' => 'mobile-menu',
                   'container' => 'ul'
             ]); ?>
 
@@ -39,7 +39,7 @@ $twitter_text = get_option('twitter_text');
 
       <div class="flex gap-3 flex-col text-cynBlack text-sm font-medium mt-8 mb-12">
 
-            <?php if ($phone_number || $telegram_link || $instagram_link || $whatsapp_link) : ?>
+            <?php if ($phone_number || $telegram_link || $instagram_link || $whatsapp_number) : ?>
 
                   <p class="text-xl font-medium"><?php _e('شبکه های اجتماعی', 'jonubgard'); ?></p>
 
@@ -54,12 +54,12 @@ $twitter_text = get_option('twitter_text');
                               </a>
                         <?php endif; ?>
 
-                        <?php if ($whatsapp_link) : ?>
-                              <a href="<?php echo $whatsapp_link ?>" class="bg-cynBG rounded-xl text-cynBlack p-2 flex items-center gap-1">
+                        <?php if ($whatsapp_number) : ?>
+                              <a href="<?php echo $whatsapp_number ?>" class="bg-cynBG rounded-xl text-cynBlack p-2 flex items-center gap-1">
                                     <i class="size-6 flex items-center justify-center text-[#22C55E] stroke-2">
                                           <?php Icon::print('Whatsup'); ?>
                                     </i>
-                                    <span class="pt-1"><?php echo $whatsapp_link ?></span>
+                                    <span class="pt-1"><?php echo $whatsapp_number ?></span>
                               </a>
                         <?php endif; ?>
 
